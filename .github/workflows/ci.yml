@@ -4,8 +4,8 @@ on:
   pull_request:
     branches: [develop]
 
-jobs: 
-  build: 
+jobs:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,11 +16,5 @@ jobs:
       - run: npm ci
       - run: npm run format:check
       - run: npm test -- --coverage
-        env: 
+        env:
           CI: true
-
-
-
-
-
-
